@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Демонстрація Аніме</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+      <h1>Аніме: Вбивця демонів</h1>
+      <nav>
+         <ul>
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#episodes">Епізоди</a></li>
+            <li><a href="#about">Про аніме</a></li>
+         </ul>
+      </nav>
+   </header>
+   <div class="main-content">
+      <div class="background-image">
+         <div class="overlay">
+            <h2>Опис аніме</h2>
+            <p>Це історія про молодого хлопця, який стає вбивцею демонів, щоб помститися за свою родину і врятувати свою сестру.</p>
+         </div>
+      </div>
+      <div class="side-image"></div>
+   </div>
+
+   <!-- Кастомний відеоплеєр -->
+   <div class="frame-container">
+      <div class="video-container">
+         <video id="animeVideo" poster="https://animego.org/upload/anime/images/5cab1063036b8449171999.png">
+            <source id="videoSource" src="videos/1.720.mp4" type="video/mp4">
+            Ваш браузер не підтримує відео тег.
+         </video>
+         <!-- Кастомні елементи керування -->
+         <div class="controls-container">
+            <button id="playPause" class="control-btn">▶️</button>
+            <div class="progress-container">
+               <input type="range" id="progressBar" value="0" min="0" max="100">
+            </div>
+            <button id="mute" class="control-btn">🔊</button>
+            <button id="fullscreen" class="control-btn">⛶</button>
+            <div class="quality-buttons">
+               <button class="quality-btn" data-quality="480p">480p</button>
+               <button class="quality-btn" data-quality="720p" class="active">720p</button>
+               <button class="quality-btn" data-quality="1080p">1080p</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="episode-switcher">
+      <button id="prev-episode">Попередня серія</button>
+      <button id="next-episode">Наступна серія</button>
+   </div>
+   <div class="episode-list">
+      <h2>Список всіх серій:</h2>
+      <button class="episode-btn" data-episode="1">1 серія</button>
+      <button class="episode-btn" data-episode="2">2 серія</button>
+      <button class="episode-btn" data-episode="3">3 серія</button>
+      <!-- Додайте більше кнопок серій за потребою -->
+   </div>
+   <script src="scripts.js"></script> 
+</body>
+</html>
